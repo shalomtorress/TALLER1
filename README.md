@@ -48,4 +48,19 @@ else:
    print("el prmer numero no es multiplo del segundo")
 ```
 declaramos las varables ```n1 y n2``` para poner los numeros, usamos el operador ```%``` para saber si el resto de la la division entre n1 y n2 es 0, si el resto es 0, el primero es multiplo del segundo, si el resto no es 0 entonces el primero no es multiplo del segundo
-
+## Punto 5 
+programa que lea tres números reales y determine si la suma de los dos primeros es mayor, menor o igual que el tercer número
+**leer documento:** punto5.ipynt
+```pseudocode
+n1 = float(input("ingrese el primer numero "))
+n2 = float(input("ingrese el segundo numero "))
+n3 = float(input("ingrese el tercer numero "))
+suma= n1 + n2
+if suma > n3: 
+   print("la suma de los dos primeros numeros es mayor que el tercero")
+elif suma < n3:
+   print("la suma de los dos primeros numeros es menor que el tercero") 
+else:
+   print("la suma de los dos prmeros numeros es gual que el tercero")
+```
+Declaramos las variables ```n1, n2 y n3```para poner los numeros, inicializamos la variable ```suma``` con ```n1+n2```, comparamos la suma con el tercer numero, si la suma es mayor, menor o igual arrojara el mensaje correspondiete 
