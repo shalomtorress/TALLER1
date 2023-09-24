@@ -64,3 +64,14 @@ else:
    print("la suma de los dos prmeros numeros es gual que el tercero")
 ```
 Declaramos las variables ```n1, n2 y n3```para poner los numeros, inicializamos la variable ```suma``` con ```n1+n2```, comparamos la suma con el tercer numero, si la suma es mayor, menor o igual arrojara el mensaje correspondiete 
+## Punto 6
+Programa que al ingresar una letra diga si es consonante o vocal 
+**leer documento:** punto6.py
+```pseudocode
+letra = input("ingrese una letra: ")
+if letra in "aeiou":
+    print("la letra es una vocal")
+else:
+    print("la letra es una consonante")
+```
+Declaramos la variable ```letra``` para poner la letra, utilizamos ```in``` para saber si la letra esta en la lista de las vocales (aeiou), si la letra esta en a lista la letra es una vocal, si laletra no esta en la lista la letra es una consonante 
