@@ -36,3 +36,16 @@ else:
     print("El número es impar")
 ```
 declaramos la variable ```n``` para poner el numero, el operador ```%``` determina si el numero es divisible por 2, si es divisible por 2 es par si no es impar 
+## Punto 4
+programa que lea dos números reales y determine si el primero es múltiplo del segundo
+**Leer documento:** punto4.py
+```pseudocode
+n1 = float(input("ingrese el primer numero: "))
+n2 = float(input("ingrese el segundo numero: "))
+if n1 % n2 == 0:
+   print("el primer numero es multiplo del segundo")
+else:
+   print("el prmer numero no es multiplo del segundo")
+```
+declaramos las varables ```n1 y n2``` para poner los numeros, usamos el operador ```%``` para saber si el resto de la la division entre n1 y n2 es 0, si el resto es 0, el primero es multiplo del segundo, si el resto no es 0 entonces el primero no es multiplo del segundo
+
