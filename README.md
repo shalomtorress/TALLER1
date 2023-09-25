@@ -47,6 +47,9 @@ if n1 % n2 == 0:
 else:
    print("el prmer numero no es multiplo del segundo")
 ```
+```mermaid
+
+```
 declaramos las varables ```n1 y n2``` para poner los numeros, usamos el operador ```%``` para saber si el resto de la la division entre n1 y n2 es 0, si el resto es 0, el primero es multiplo del segundo, si el resto no es 0 entonces el primero no es multiplo del segundo
 ## Punto 5 
 programa que lea tres números reales y determine si la suma de los dos primeros es mayor, menor o igual que el tercer número
@@ -929,17 +932,16 @@ la funcion ```main``` declara una lista ```paises``` que contiene los paises y l
 la funcion pide al usuario poner el nombre de un pais de america en minuscula, el nombre del pais esta dentro de la variable ```pais```
 La función comprueba si el país existe en la lista. Si el país esta en la lista, se devuelve la capital del país. si el pais que se puso no esta en la lista, se devuelve el mensaje "país no identificado"
 ```mermaid
-sequenceDiagram
-  participant Usuario
-  participant Programa
-
-  Usuario ->> Programa: Introduce el nombre del país en minúsculas
-  Programa ->> Programa: Comprueba si el país existe en la lista
-  alt País existe
-    Programa ->> Usuario: Devuelve la capital del país
-  else País no existe
-    Programa ->> Usuario: Devuelve "país no identificado"
-  end
+graph TD
+    A[Inicio] --> B[Definir el diccionario de países y capitales]
+    B --> C[Ingresar el nombre del país en minúsculas]
+    C --> D[¿El país está en el diccionario?]
+    D --> |Sí| E[Obtener la capital del país]
+    D --> |No| F[Retornar "país no identificado"]
+    E --> G[Retornar la capital]
+    F --> G[Retornar "país no identificado"]
+    G --> H[Imprimir la capital o "país no identificado"]
+    H --> I[Fin]
 ```
 ## Punto 10 
 un programa que dada una distancia calcule:
