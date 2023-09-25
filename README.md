@@ -84,6 +84,7 @@ programa que pida 5 números reales y calcule las siguientes operaciones:
   + Ordenar los números de forma descendente
   + La potencia del mayor número elevado al menor número
   + La raíz cúbica del menor número
+**leer documento:** yanodoymas.ipynt
 ```pseudocode
 primer_numero = float(input("Ingrese primer numero "))
 segundo_numero = float(input("Ingrese segundo numero "))
