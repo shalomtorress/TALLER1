@@ -48,7 +48,19 @@ else:
    print("el prmer numero no es multiplo del segundo")
 ```
 ```mermaid
+sequenceDiagram
+  participant Usuario
+  participant Programa
 
+  Usuario ->> Programa: Ingresa el primer número
+  Usuario ->> Programa: Ingresa el segundo número
+  Programa ->> Programa: Calcula el resto de la división del primer número entre el segundo número
+  Programa ->> Programa: Comprueba si el resto es 0
+  alt Resto es 0
+    Programa ->> Usuario: Imprime "el primer número es multiplo del segundo"
+  else Resto no es 0
+    Programa ->> Usuario: Imprime "el primer número no es multiplo del segundo"
+  end
 ```
 declaramos las varables ```n1 y n2``` para poner los numeros, usamos el operador ```%``` para saber si el resto de la la division entre n1 y n2 es 0, si el resto es 0, el primero es multiplo del segundo, si el resto no es 0 entonces el primero no es multiplo del segundo
 ## Punto 5 
@@ -932,16 +944,17 @@ la funcion ```main``` declara una lista ```paises``` que contiene los paises y l
 la funcion pide al usuario poner el nombre de un pais de america en minuscula, el nombre del pais esta dentro de la variable ```pais```
 La función comprueba si el país existe en la lista. Si el país esta en la lista, se devuelve la capital del país. si el pais que se puso no esta en la lista, se devuelve el mensaje "país no identificado"
 ```mermaid
-graph TD
-    A[Inicio] --> B[Definir el diccionario de países y capitales]
-    B --> C[Ingresar el nombre del país en minúsculas]
-    C --> D[¿El país está en el diccionario?]
-    D --> |Sí| E[Obtener la capital del país]
-    D --> |No| F[Retornar "país no identificado"]
-    E --> G[Retornar la capital]
-    F --> G[Retornar "país no identificado"]
-    G --> H[Imprimir la capital o "país no identificado"]
-    H --> I[Fin]
+sequenceDiagram
+  participant Usuario
+  participant Programa
+
+  Usuario ->> Programa: Introduce el nombre del país en minúsculas
+  Programa ->> Programa: Comprueba si el país existe en el diccionario
+  alt País existe
+    Programa ->> Usuario: Devuelve la capital del país
+  else País no existe
+    Programa ->> Usuario: Devuelve "país no identificado"
+  end
 ```
 ## Punto 10 
 un programa que dada una distancia calcule:
