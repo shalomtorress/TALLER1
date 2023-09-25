@@ -877,7 +877,56 @@ usamos el mismo codigo que usamos para encontrar el numero menor
 y lo operamos para hallar la raiz cubica
 ```raiz_cubica = numero_menor**(1/3)```
 # Punto 8
+Escribir un programa que arroje en que parte del espectro electromagnetico se encuentra
+```pseudocode
+def clasificar_espectro(frecuencia):
+  """
+  Clasifica una onda en el espectro electromagnético según su frecuencia.
 
+  Args:
+    frecuencia: La frecuencia de la onda en hercios.
+
+  Returns:
+    La parte del espectro electromagnético en la que se encuentra la onda.
+  """
+
+  # Inicio
+
+  # Leer la frecuencia
+
+  frecuencia = float(input("Ingrese la frecuencia de la onda en Hz: "))
+
+  # Clasificación
+
+  if frecuencia < 30:
+    parte_espectro = "Ondas de radio muy bajas (VLF)"
+  elif frecuencia < 300:
+    parte_espectro = "Ondas de radio bajas (LF)"
+  elif frecuencia < 3000:
+    parte_espectro = "Ondas de radio medias (MF)"
+  elif frecuencia < 30000:
+    parte_espectro = "Ondas de radio altas (HF)"
+  elif frecuencia < 300000:
+    parte_espectro = "Ondas de radio muy altas (VHF)"
+  elif frecuencia < 3000000:
+    parte_espectro = "Microondas"
+  elif frecuencia < 300000000:
+    parte_espectro = "Luz infrarroja"
+  elif frecuencia < 300000000000:
+    parte_espectro = "Luz visible"
+  elif frecuencia < 30000000000000:
+    parte_espectro = "Luz ultravioleta"
+  elif frecuencia < 300000000000000:
+    parte_espectro = "Rayos X"
+  else:
+    parte_espectro = "Rayos gamma"
+
+  # Salida
+
+  print(f"La onda se encuentra en el espectro {parte_espectro}.")
+  ```
+  La función ```clasificar_espectro()``` recibe como parámetro la frecuencia de la onda en hercios, la función itera a través de las diferentes partes del espectro electromagnético, comparando la frecuencia ingresada con los límites de cada rango y si la frecuencia ingresada esta dentro del rango, el codigo devuelve el nombre de ese rango.
+  
 
 
 
