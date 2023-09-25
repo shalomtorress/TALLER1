@@ -1,5 +1,7 @@
 # Taller 1 
 ## Equipo alfa buena maravilla onda dinamita escuadrón lobo
+![Uploading Logo.png…]()
+
 
 
 
