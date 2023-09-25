@@ -861,3 +861,107 @@ usamos las variables y las multiplicamos
 usamos el mismo codigo que usamos para encontrar el numero menor 
 y lo operamos para hallar la raiz cubica
 ```raiz_cubica = numero_menor**(1/3)```
+# Punto 8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Punto 9 
+programa que reciba el nombre en minúsculas de un país de America y retorne la ciudad capital, si el país no pertenece al continente debe arrojar país no identificado.
+**leer documento** puntoo9.py
+```pesudocode
+def main():
+    paises = {
+        "argentina": "buenos aires",
+        "bolivia": "la paz",
+        "brasil": "brasilia",
+        "canada": "ottawa",
+        "chile": "santiago",
+        "colombia": "bogotá",
+        "costa rica": "san josé",
+        "cuba": "la habana",
+        "dominicana": "santo domingo",
+        "ecuador": "quito",
+        "el salvador": "san salvador",
+        "estados unidos": "washington dc",
+        "guatemala": "ciudad de guatemala",
+        "haití": "puerto príncipe",
+        "honduras": "tegucigalpa",
+        "mexico": "ciudad de méxico",
+        "nicaragua": "managua",
+        "panama": "ciudad de panamá",
+        "paraguay": "asunción",
+        "peru": "lima",
+        "república dominicana": "santo domingo",
+        "uruguay": "montevideo",
+        "venezuela": "caracas",
+    }
+    pais = input("Introduce el nombre del país en minúsculas: ")
+    if pais in paises:
+        capital = paises[pais]
+        return capital
+    else:
+        return "país no identificado"
+if __name__ == "__main__":
+    capital = main()
+    print(capital)
+```
+la funcion ```main``` declara una lista ```paises``` que contiene los paises y las capitales 
+la funcion pide al usuario poner el nombre de un pais de america en minuscula, el nombre del pais esta dentro de la variable ```pais```
+La función comprueba si el país existe en la lista. Si el país esta en la lista, se devuelve la capital del país. si el pais que se puso no esta en la lista, se devuelve el mensaje "país no identificado"
+```mermaid
+sequenceDiagram
+  participant Usuario
+  participant Programa
+
+  Usuario ->> Programa: Introduce el nombre del país en minúsculas
+  Programa ->> Programa: Comprueba si el país existe en la lista
+  alt País existe
+    Programa ->> Usuario: Devuelve la capital del país
+  else País no existe
+    Programa ->> Usuario: Devuelve "país no identificado"
+  end
+```
+## Punto 10 
+un programa que dada una distancia calcule:
++ El tiempo que le tomaría a la luz recorrer la distancia.
++ El tiempo que le tomaría al sonido (en el aire) recorrer la distancia.
++ El tiempo que le tomaría al vehiculo comercial más veloz recorrer la distancia.
++ El tiempo que le tomaría a Bolt recorrer la distancia.
+```pseudocode
+distancia=float(input("ingrese distancia en KM "))
+#las velocidades estabn en kilometros 
+Vluz = 299.792
+Vsonido = 1235 
+V_SSC_Tuatara = 508 
+Vbolt = 42
+
+Tluz=float(distancia/Vluz)
+print("El tiempo que le tomara a la luz es de " +str(Tluz))
+Tsonido=float(distancia/Vsonido)
+print("El tiempo que le tomara a el sonido es " +str(Tsonido))
+Tssc_tuatara=float(distancia/V_SSC_Tuatara)
+print("El tiempo que le tomara al SSC Tuatara es" +str(Tssc_tuatara))
+Tbolt=float(distancia/Vbolt)
+print("El tiempo que le tomara a usaint bolt es " +str(Tbolt))
+```
+Declaramos las cvariables con la velocidad correspondiente, las velocidades estan en kilometros por hora, ahora se divide la distancia ingresada por el usuario entre la velocidad de cada uno de los items y dara su valor 
